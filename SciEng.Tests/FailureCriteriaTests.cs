@@ -1,5 +1,7 @@
 using SciEng.Core;
+using SciEng.Core.Units;
 using System;
+using Xunit;
 
 namespace SciEng.Tests
 {
@@ -8,11 +10,11 @@ namespace SciEng.Tests
         [Fact]
         public void VonMises_ReducesToUniaxialStress()
         {
-            var s = 300.MPa();
+            var s = Units.MPa(300);
 
             var vm = FailureCriteria.VonMises(
-                s, 0.Pa(), 0.Pa(),
-                0.Pa(), 0.Pa(), 0.Pa()
+                s, Units.Pa(0), Units.Pa(0),
+                Units.Pa(0), Units.Pa(0), Units.Pa(0)
             );
 
             Assert.Equal(300, vm.MegaPascals, precision: 1);

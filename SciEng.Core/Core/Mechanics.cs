@@ -1,4 +1,5 @@
 ﻿using SciEng.Core.Units;
+using SciEng.Core.Materials;
 
 namespace SciEng.Core
 {
@@ -12,7 +13,7 @@ namespace SciEng.Core
         public static Stress CalculateUniaxialStress(Force force, Area area)
         {
             var stressPa = force.Newtons / area.SquareMetres;
-            return stressPa.FromPascals(stressPa);
+            return stressPa.Pa();
         }
 
         /// <summary>

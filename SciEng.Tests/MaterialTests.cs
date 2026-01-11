@@ -1,5 +1,8 @@
 using SciEng.Core;
+using SciEng.Core.Units;
+using SciEng.Core.Materials;
 using Xunit;
+using System;
 
 namespace SciEng.Tests
 {
@@ -9,7 +12,7 @@ namespace SciEng.Tests
         public void InvalidPoissonRatio_Throws()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() =>
-                new MaterialTests(200e9, 0.9, 300e6)
+                new Material(200e9, 0.9, 300e6)
             );
         }
     }

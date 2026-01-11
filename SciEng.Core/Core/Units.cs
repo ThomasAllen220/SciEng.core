@@ -54,9 +54,22 @@ namespace SciEng.Core.Units
         public static Force kN(this double value) => Force.FromKiloNewtons(value);
 
         public static Area m2(this double value) => Area.FromSquareMetres(value);
-        public static Area mm2(this double value) => Area.FromSquareMillimeres(value);
+        public static Area mm2(this double value) => Area.FromSquareMillimetres(value);
 
         public static Stress Pa(this double value) => Stress.FromPascals(value);
         public static Stress MPa(this double value) => Stress.FromPascals(value * 1e6);
+    }
+
+    public static class Units
+    {
+        // Forwarding methods
+        public static Force N(double value) => value.N();
+        public static Force kN(double value) => value.kN();
+
+        public static Area m2(double value) => value.m2();
+        public static Area mm2(double value) => value.mm2();
+
+        public static Stress Pa(double value) => value.Pa();
+        public static Stress MPa(double value) => value.MPa();
     }
 }

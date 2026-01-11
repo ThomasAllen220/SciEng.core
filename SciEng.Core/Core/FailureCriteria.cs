@@ -10,7 +10,7 @@ namespace SciEng.Core
         /// Assumes isotropic, ductile material.
         /// </summary>
         
-        public statis Stress VonMises(
+        public static Stress VonMises(
             Stress sxx,
             Stress syy,
             Stress szz,

@@ -1,4 +1,4 @@
-namespace SciEng.Core
+namespace SciEng.Core.Materials
 {
     public sealed class Material
     {

@@ -1,5 +1,6 @@
 ﻿using System;
 using SciEng.Core.Units;
+using SciEng.Core.Materials;
 
 namespace SciEng.Core
 {
@@ -32,7 +33,7 @@ namespace SciEng.Core
             {
                 Validation.RequirePositive(length, nameof(length));
                 Validation.RequirePositive(secondMomentOfArea, nameof(secondMomentOfArea));
-#
+
                 return force.Newtons * Math.Pow(length, 3)
                     / (3 * material.YoungsModulus * secondMomentOfArea);
             }
