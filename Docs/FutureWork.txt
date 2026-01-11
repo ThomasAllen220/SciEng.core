@@ -1,0 +1,8 @@
+## Non-goals
+- Full finite element analysis
+- High-fidelity CFD
+
+## Potential extensions
+- Native C++ acceleration for numerics
+- Cloud-executed batch evaluation
+- Integration into automated design pipelines
